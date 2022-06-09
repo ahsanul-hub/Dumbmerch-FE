@@ -1,0 +1,400 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans','Avenir', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding:0;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', Avenir,
+    monospace;
+}
+
+
+.left-side{
+  padding-top:142;
+}
+
+.right-side{
+/*   background-color: green; */
+  width:39%;
+  display: inline-block;
+}
+
+.logo{
+  margin-top:142px;
+}
+
+.title-landing{
+  font-weight:700;
+  font-size:56px;
+  color:white;
+  margin-top: 15px;
+}
+
+.text-landing{
+  margin-top: 10px;
+  color:#6A6A6A;
+  font-weight:700;
+  font-size:18px;
+}
+
+.login-container{
+  background-color:#181818;
+  width:416px !important;
+  margin:auto;
+  margin-top:197px;
+  padding: 41px 33px 29px 33px;
+}
+
+.input-login{
+  width:100%;
+  background: rgba(210, 210, 210, 0.25) !important;
+  opacity: 25%;
+  border: 2px solid #BCBCBC !important;
+  border-radius:5px;
+  color:white !important;
+  font-size:900;
+  
+}
+
+.btn-login{
+  background-color:#F74D4D;
+  border:none;
+  padding: 12px 0px 12px 0px;
+  border-radius:5px;
+  color:white;
+  font-size:18px;
+}
+
+.login-title{
+  font-size:36px;
+  font-weight:900;
+  color:white;
+}
+
+.btn-container{
+  margin-top: 80px;
+}
+
+.btn-nav{
+  width:135px;
+  margin-right:2px;
+  border:none;
+  border-radius:5px;
+  color:white;
+  padding: 7px 25px;
+  font-size:18px;
+}
+
+.btn-small-reg{
+  background:none;
+}
+
+.btn-small-login{
+  background-color:#F74D4D;
+}
+
+.nav-container{
+  background-color: #0B0B0B; 
+}
+
+.nav-logo{
+  margin: 28px 0px 28px 50px;
+}
+
+.nav-link-container{
+  float: right;
+  /* display:inline;   */
+  margin :44px;
+  padding: 0px;
+}
+
+.nav-link{
+  float:left;
+  font-size: 18px;
+  font-weight: 700;
+  color:#FFFFFF !important ;
+  cursor: pointer;
+}
+
+/* .product-container{} */
+
+.page-product{
+  background-color: #0B0B0B;
+  margin: 0 !important;
+  width: 100%;
+  padding:30px 85px;
+}
+
+.header-product{
+  color: #F74D4D;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.product-container{
+  background-color: #212121;
+  width: 241px;
+  display: inline-block;
+  margin-right: 15px;
+  border-radius: 3px;
+  text-decoration: none !important;
+}
+
+.desc-product{
+  padding: 14px 16px;
+  color:#ffffff;
+  font-size: 14px;
+  line-height: 10px;
+}
+
+.product-title{
+  color: #F74D4D;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.profile-page{
+  background-color: #0B0B0B;
+  padding: 40px 80px 0px 86px;
+  
+}
+
+.profile-section{
+  max-width:65%;
+  float:left ;
+}
+
+.profile-img{
+  width: 338px;
+  /* margin-top: 34px; */
+  margin-right: 38px;
+  display: inline !important;
+}
+
+.bio-container{
+  display: inline !important;
+}
+
+
+.myTrans-section{
+  /* background-color: yellow; */
+  max-width:35%;
+  float: right !important;
+  width: 520px;
+}
+
+.bio-title{
+  color: #F74D4D;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.bio-value{
+  color: #FFFFFF;
+  font-size: 18px;
+  margin-bottom: 23px;
+}
+
+.list-page{
+  background-color:#0B0B0B;
+  padding: 80px 85px;
+  padding-bottom: 200px !important;
+}
+
+.btn-action{
+  width: 135px;
+  height:40px;
+  border: none !important;
+}
+
+.btn-edit{
+  background-color: #56C05A !important;
+}
+
+.btn-delete{
+  background-color: #F74D4D !important;
+}
+
+.header-list-product{
+  font-size: 24px;
+  font-weight: 700;
+  color: #FFFFFF;
+  display: inline-block
+  ;
+}
+
+.btn-action:active{
+  box-shadow: none !important;
+}
+
+.upload-label{
+  background-color: #F74D4D;
+  color: #FFFFFF;
+  padding: 12px 30px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.form-input{
+  background-color: rgba(210, 210, 210, 0.25) !important;
+  border: 2px solid #BCBCBC;
+  min-height: 50px;
+  color: #FFFFFF !important;
+  margin-bottom: 20px;
+  border-radius:5px !important ;
+}
+
+.form-input::placeholder {
+  color: #FFFFFF !important;
+}
+
+.btn-add{
+  margin-top: 80px;
+  width: 100%;
+  padding: 20px;
+  font-weight: 600 !important;
+  background-color: #56C05A !important;
+}
+
+.detail-page{
+  background-color: #0B0B0B !important;
+  height: 100%;
+  padding: 65px 195px;
+}
+
+.product-name{
+  color: #F74D4D;
+}
+
+p{
+  color: #FFFFFF;
+}
+
+.product-spec{
+  text-align:justify;
+}
+
+.detail-price{
+  text-align: end;
+  font-size: 24px;
+  font-weight: 700;
+  color: #F74D4D;
+  margin: 35px 0px;
+}
+
+ul{
+  list-style-type: none;
+  color: #FFFFFF;
+
+}
+
+.chat-area{
+  height:450px;
+  width: 1030px !important;
+  padding-top: 20px;
+  color:#FFFFFF;
+  overflow-y: auto !important;
+}
+
+.message-input{
+  width: 970px !important;
+  margin: 10px 0px 0px 25px;
+  background-color: rgba(171, 171, 171, 0.15) !important;
+  border: none !important;
+  padding: 17px !important;
+  color:#FFFFFF !important;
+}
+
+.complain-page{
+  background-color: #0B0B0B;
+}
+
+.img-contact{
+  width: 60px !important;
+  height: 40px !important;
+  border-radius: 50% !important;
+}
+
+.contact-list{
+  padding: 8px 15px 8px 10px !important;
+  color: #FFFFFF;
+}
+
+a{
+  text-decoration: none;
+}
+
+/* .chat{
+  height: max-content !important;
+} */
+
+.chat-me{
+  background-color: #262626;
+  padding: 9px 13px;
+  border-radius: 5px;
+  margin: 5px 25px;
+  justify-content: end !important;
+  max-width: 50% !important;
+
+}
+
+.chat-other {
+  background-color: #262626;
+  padding: 9px 13px;
+  border-radius: 5px;
+  margin: 5px 25px;
+  float: left !important;
+}
+
+.img-carts{
+  width: 70px !important;
+}
+
+.cart-container{
+  color:#FFFFFF;
+  background-color: #0B0B0B;
+}
+
+.btn-buy{
+  width: 50%;
+  background-color: #F74D4D !important;
+  border: none !important ;
+}
+
+.btn-add-list{
+  float:right;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 0;
+  background: #575757;
+
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #161616;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #575757;
+}

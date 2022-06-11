@@ -22,7 +22,7 @@ export default function Cart() {
     }
   };
   const increaseCart = async (idProduct) => {
-    // e.preventDefault();
+    e.preventDefault();
 
     try {
       const result = product.find(({ id }) => id == idProduct);
@@ -42,7 +42,7 @@ export default function Cart() {
   };
 
   const decreaseCart = async (idProduct) => {
-    // e.preventDefault();
+    e.preventDefault();
 
     try {
       const result = product.find(({ id }) => id == idProduct);

@@ -24,7 +24,7 @@ export default function Detail() {
 
   const handleAddCart = async () => {
     try {
-      // e.preventDefault();
+      e.preventDefault();
 
       const config = {
         headers: {

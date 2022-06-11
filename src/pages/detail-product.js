@@ -22,7 +22,7 @@ export default function Detail() {
     }
   };
 
-  const handleAddCart = async () => {
+  const handleAddCart = async (e) => {
     try {
       e.preventDefault();
 

@@ -21,7 +21,7 @@ export default function Cart() {
       console.log(error);
     }
   };
-  const increaseCart = async (idProduct) => {
+  const increaseCart = async (idProduct, e) => {
     e.preventDefault();
 
     try {
@@ -41,7 +41,7 @@ export default function Cart() {
     }
   };
 
-  const decreaseCart = async (idProduct) => {
+  const decreaseCart = async (idProduct, e) => {
     e.preventDefault();
 
     try {

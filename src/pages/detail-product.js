@@ -36,7 +36,7 @@ export default function Detail() {
       const body = JSON.stringify({ idProduct: id });
 
       const response = await API.post("/cart", body, config);
-      console.log(response.data);
+      console.log(response);
 
       // Checking process
       if (response?.status == 200) {

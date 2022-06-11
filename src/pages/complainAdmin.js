@@ -51,14 +51,17 @@ export default function ComplainAdmin() {
   };
 
   useEffect(() => {
-    socket = io("http://localhost:5000", {
-      auth: {
-        token: localStorage.getItem("token"),
-      },
-      query: {
-        id: state.user.id,
-      },
-    });
+    socket = io(
+      "http://localhost:5000" || "https://dumbmerch-ahsanul.herokuapp.com/",
+      {
+        auth: {
+          token: localStorage.getItem("token"),
+        },
+        query: {
+          id: state.user.id,
+        },
+      }
+    );
 
     socket.on("new message", () => {
       console.log("contact : ", contact);

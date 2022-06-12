@@ -58,7 +58,7 @@ export default function Complain() {
 
   useEffect(() => {
     socket = io(
-      "http://localhost:5000" || "https://dumbmerch-ahsanul.herokuapp.com/",
+      "https://dumbmerch-ahsanul.herokuapp.com" || "http://localhost:5000",
       {
         auth: {
           token: localStorage.getItem("token"),

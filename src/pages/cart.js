@@ -197,14 +197,20 @@ export default function Cart() {
                               src={Trash}
                             />
                           </div>
-                          <label key={index} className="checkbox-inline me-4">
+                          {/* <label key={index} className="checkbox-inline me-4">
                             <input
                               type="checkbox"
                               value={item.qty * item.product.price}
                               onClick={handleAddTransaction}
                             />{" "}
                             {item.name}
-                          </label>
+                          </label> */}
+                          <button
+                            onClick={handleBuy}
+                            className="btn btn-buy btn-secondary px-3 mt-5 mr-2"
+                          >
+                            Buy
+                          </button>
                         </div>
                       </Col>
                     </Row>

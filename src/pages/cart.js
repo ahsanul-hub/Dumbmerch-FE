@@ -21,8 +21,8 @@ export default function Cart() {
       console.log(error);
     }
   };
-  const increaseCart = async (idProduct, e) => {
-    e.preventDefault();
+  const increaseCart = async (idProduct) => {
+    // e.preventDefault();
 
     try {
       const result = product.find(({ id }) => id == idProduct);
@@ -41,8 +41,8 @@ export default function Cart() {
     }
   };
 
-  const decreaseCart = async (idProduct, e) => {
-    e.preventDefault();
+  const decreaseCart = async (idProduct) => {
+    // e.preventDefault();
 
     try {
       const result = product.find(({ id }) => id == idProduct);

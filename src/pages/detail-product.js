@@ -33,7 +33,7 @@ export default function Detail() {
       };
 
       let idProduct = id;
-      const body = JSON.stringify(idProduct);
+      const body = JSON.stringify({ idProduct });
 
       const response = await API.post("/cart", body, config);
       console.log(response);

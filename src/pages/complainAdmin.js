@@ -52,7 +52,8 @@ export default function ComplainAdmin() {
 
   useEffect(() => {
     socket = io(
-      "http://localhost:5000" || "https://dumbmerch-ahsanul.herokuapp.com/",
+      // "http://localhost:5000" ||
+      "https://dumbmerch-ahsanul.herokuapp.com",
       {
         auth: {
           token: localStorage.getItem("token"),

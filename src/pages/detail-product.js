@@ -32,8 +32,8 @@ export default function Detail() {
         },
       };
 
-      let idProduct = id;
-      const body = JSON.stringify({ idProduct });
+      // let idProduct = id;
+      const body = JSON.stringify({ idProduct: id });
 
       const response = await API.post("/cart", body, config);
       console.log(response);

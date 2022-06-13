@@ -54,13 +54,19 @@ export default function Profile() {
               {/* <Col style={{ paddingLeft: "0px", maxWidth: "376px" }}>
                 <img src={profile.image} className="profile-img" />
               </Col> */}
-              {profile.image !== "http://localhost:5000/uploads/null" ? (
+              {profile.image !==
+              "https://res.cloudinary.com/jakarta098/image/upload/v1654973984/null" ? (
                 <Col style={{ paddingLeft: "0px", maxWidth: "376px" }}>
                   <img src={profile?.image} className="profile-img" />
                 </Col>
               ) : (
                 <Col style={{ paddingLeft: "0px", maxWidth: "376px" }}>
-                  <img src={User} className="profile-img" />
+                  <img
+                    src={
+                      "https://res.cloudinary.com/jakarta098/image/upload/v1655136635/dumbmerch/user_mfv78o.png"
+                    }
+                    className="profile-img"
+                  />
                 </Col>
               )}
               <Col>
@@ -89,8 +95,8 @@ export default function Profile() {
             >
               <Row>
                 <Col xs="3" style={{ padding: "0px" }}>
-                  {item.product.image ===
-                  "https://res.cloudinary.com/jakarta098/image/upload/v1654973984/null" ? (
+                  {item.product.image !==
+                  "http://localhost:5000/uploads/undefined" ? (
                     <Col>
                       <img
                         src={item.product.image}
@@ -106,9 +112,7 @@ export default function Profile() {
                   ) : (
                     <Col>
                       <img
-                        src={
-                          "https://res.cloudinary.com/jakarta098/image/upload/v1655136635/dumbmerch/user_mfv78o.png"
-                        }
+                        src={Dumbmerch}
                         style={{
                           maxHeight: "70px",
                           margin: "15px 10px",

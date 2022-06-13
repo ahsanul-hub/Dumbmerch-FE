@@ -115,10 +115,10 @@ export default function Cart() {
         },
       };
 
-      const data = {
+      let data = {
         id,
         qty,
-        price,
+        price: qty * price,
       };
       const body = JSON.stringify(data);
       const response = await API.post("/transaction/", body, config);

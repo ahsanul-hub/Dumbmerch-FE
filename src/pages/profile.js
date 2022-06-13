@@ -89,7 +89,7 @@ export default function Profile() {
             >
               <Row>
                 <Col xs="3" style={{ padding: "0px" }}>
-                  {item.product.image !==
+                  {item.product.image ===
                   "https://res.cloudinary.com/jakarta098/image/upload/v1654973984/null" ? (
                     <Col>
                       <img

@@ -54,19 +54,13 @@ export default function Profile() {
               {/* <Col style={{ paddingLeft: "0px", maxWidth: "376px" }}>
                 <img src={profile.image} className="profile-img" />
               </Col> */}
-              {profile.image !==
-              "https://res.cloudinary.com/jakarta098/image/upload/v1654973984/null" ? (
+              {profile.image !== "http://localhost:5000/uploads/null" ? (
                 <Col style={{ paddingLeft: "0px", maxWidth: "376px" }}>
                   <img src={profile?.image} className="profile-img" />
                 </Col>
               ) : (
                 <Col style={{ paddingLeft: "0px", maxWidth: "376px" }}>
-                  <img
-                    src={
-                      "https://res.cloudinary.com/jakarta098/image/upload/v1655136635/dumbmerch/user_mfv78o.png"
-                    }
-                    className="profile-img"
-                  />
+                  <img src={User} className="profile-img" />
                 </Col>
               )}
               <Col>

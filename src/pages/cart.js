@@ -207,7 +207,7 @@ export default function Cart() {
                           </label> */}
                           <button
                             onClick={handleBuy}
-                            className="btn btn-buy btn-secondary px-3 mt-5 mr-2"
+                            className="btn btn-buy btn-secondary px-3 justify-content-center mr-2"
                           >
                             Buy
                           </button>
@@ -227,40 +227,6 @@ export default function Cart() {
             )}
 
             {/* <pre>{JSON.stringify(stateCartDetail.restaurant.fullname, null, 2)}</pre> */}
-          </Col>
-          <Col md={4} className="ms-4">
-            <div className="line-cart mb-2 mt-2 "></div>
-            <Row style={{ backgroundColor: "#262626" }}>
-              <Col xs={6}>
-                <div className="mb-2 mt-3">Subtotal</div>
-              </Col>
-              <Col xs={6}>
-                <div className="mb-2 mt-3 text-right text-danger">
-                  Rp {total}
-                </div>
-              </Col>
-            </Row>
-            <div className="line-cart mt-2"></div>
-            <Row>
-              {/* <Col xs={6}>
-                <div className="mb-2 mt-1 text-total-pembayaran-cart">
-                  Total
-                </div>
-              </Col>
-              <Col xs={6}>
-                <div className="mb-2 mt-1 text-right text-danger text-total-pembayaran-cart">
-                  Rp{" "}
-                </div>
-              </Col> */}
-              <Col xs={12} className="text-end">
-                <button
-                  onClick={handleBuy}
-                  className="btn btn-buy btn-secondary px-3 mt-5 mr-2"
-                >
-                  Buy
-                </button>
-              </Col>
-            </Row>
           </Col>
         </Row>
       </Container>

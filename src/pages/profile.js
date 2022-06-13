@@ -106,7 +106,9 @@ export default function Profile() {
                   ) : (
                     <Col>
                       <img
-                        src={Dumbmerch}
+                        src={
+                          "https://res.cloudinary.com/jakarta098/image/upload/v1655136635/dumbmerch/user_mfv78o.png"
+                        }
                         style={{
                           maxHeight: "70px",
                           margin: "15px 10px",

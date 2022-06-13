@@ -37,10 +37,8 @@ export default function Profile() {
 
   useEffect(() => {
     getProfile();
-  }, []);
-
-  useEffect(() => {
     getTransactions();
+    console.log(transaction);
   }, []);
 
   return (

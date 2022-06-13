@@ -54,7 +54,7 @@ export default function Profile() {
               {/* <Col style={{ paddingLeft: "0px", maxWidth: "376px" }}>
                 <img src={profile.image} className="profile-img" />
               </Col> */}
-              {profile.image ===
+              {profile.image !==
               "https://res.cloudinary.com/jakarta098/image/upload/v1655136635/dumbmerch/null" ? (
                 <Col style={{ paddingLeft: "0px", maxWidth: "376px" }}>
                   <img src={profile?.image} className="profile-img" />

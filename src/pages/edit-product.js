@@ -145,6 +145,7 @@ export default function Editproduct() {
                 <Form.Control
                   type="file"
                   name="image"
+                  value={form.image}
                   onChange={handleChange}
                   hidden
                 />

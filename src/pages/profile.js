@@ -90,7 +90,7 @@ export default function Profile() {
               <Row>
                 <Col xs="3" style={{ padding: "0px" }}>
                   {item.product.image !==
-                  "http://localhost:5000/uploads/undefined" ? (
+                  "https://res.cloudinary.com/jakarta098/image/upload/v1654973984/null" ? (
                     <Col>
                       <img
                         src={item.product.image}

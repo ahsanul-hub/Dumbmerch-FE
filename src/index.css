@@ -188,6 +188,7 @@ code {
   max-width:35%;
   float: right !important;
   width: 520px;
+  overflow-y: auto !important;
 }
 
 .bio-title{

@@ -121,7 +121,7 @@ export default function Editproduct() {
   return (
     <div>
       <NavbarAdmin />
-      <div className="vh-100 list-page">
+      <div className="list-page">
         <Container>
           <h1 className="mb-5 header-list-product">Edit Product</h1>
           <Row>

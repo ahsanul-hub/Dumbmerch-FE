@@ -91,28 +91,6 @@ export default function Cart() {
     //   setCategoryId(newCategoryId);
     // }
   };
-  const handleBuy = async (e) => {
-    try {
-      e.preventDefault();
-
-      const config = {
-        headers: {
-          "Content-type": "application/json",
-        },
-      };
-
-      // Convert form data to string here ...
-      const body = JSON.stringify({ price: total });
-
-      // Insert data category for login process here ...
-      const response = await API.post("/transaction", body, config);
-      console.log(response);
-
-      navigate("/profile");
-    } catch (error) {
-      console.log(error);
-    }
-  };
 
   const deleteById = async (id) => {
     try {
@@ -126,6 +104,65 @@ export default function Cart() {
     getProductCart();
     console.log(total);
   }, []);
+
+  const handleBuy = async (id, qty, price) => {
+    try {
+      // e.preventDefault();
+
+      const config = {
+        headers: {
+          "Content-type": "application/json",
+        },
+      };
+
+      const data = {
+        id,
+        qty,
+        price,
+      };
+      const body = JSON.stringify(data);
+      const response = await API.post("/transaction/", body, config);
+      console.log(response);
+
+      // Checking process
+      // if (response?.status == 200) {
+      //   const alert = (
+      //     <Alert variant="success" className="py-1">
+      //       Add Transaction success
+      //     </Alert>
+      //   );
+      //   setMessage(alert);
+      //   navigate("/profile");
+      // }
+
+      const token = response.data.payment.token;
+
+      // Init Snap for display payment page with token here ...
+      window.snap.pay(token, {
+        onSuccess: function (result) {
+          /* You may add your own implementation here */
+          console.log(result);
+          navigate("/profile");
+        },
+        onPending: function (result) {
+          /* You may add your own implementation here */
+          console.log(result);
+          navigate("/profile");
+        },
+        onError: function (result) {
+          /* You may add your own implementation here */
+          console.log(result);
+        },
+        onClose: function () {
+          /* You may add your own implementation here */
+          API.delete(`/transaction/${response.data.id}`);
+          alert("you closed the popup without finishing the payment");
+        },
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <div style={{ backgroundColor: "#0B0B0B" }} className="vh-100">
@@ -206,8 +243,12 @@ export default function Cart() {
                             {item.name}
                           </label> */}
                           <button
-                            onClick={handleBuy}
-                            className="btn btn-buy btn-secondary px-3 justify-content-center mr-2"
+                            onClick={handleBuy(
+                              item.id,
+                              item.qty,
+                              item.product.price
+                            )}
+                            className="btn btn-buy text-center btn-secondary px-3 "
                           >
                             Buy
                           </button>

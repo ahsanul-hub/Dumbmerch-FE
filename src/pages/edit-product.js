@@ -141,11 +141,12 @@ export default function Editproduct() {
               )}
 
               <Form.Group controlId="formFile" className="mb-4">
-                <Form.Label className="upload-label">Upload File</Form.Label>
+                <label for="upload" className="upload-label">Upload File</label>
                 <Form.Control
+                id="upload"
                   type="file"
                   name="image"
-                  // value={form.image}
+                  // value={form?.image}
                   onChange={handleChange}
                   hidden
                 />

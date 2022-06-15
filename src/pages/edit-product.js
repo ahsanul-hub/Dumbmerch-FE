@@ -146,7 +146,7 @@ export default function Editproduct() {
                 id="upload"
                   type="file"
                   name="image"
-                  // value={form?.image}
+                  value={form?.image}
                   onChange={handleChange}
                   hidden
                 />

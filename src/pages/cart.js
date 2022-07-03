@@ -105,7 +105,7 @@ export default function Cart() {
     console.log(total);
   }, []);
 
-  const handleBuy = async (id, qty, price) => {
+  const handleBuy = async (item) => {
     try {
       // e.preventDefault();
 
@@ -114,26 +114,15 @@ export default function Cart() {
           "Content-type": "application/json",
         },
       };
-
+      console.log(item.id, item.qty, item.price);
       let data = {
-        id,
-        qty,
-        price: qty * price,
+        id: item.id,
+        qty: item.qty,
+        price: item.price,
       };
       const body = JSON.stringify(data);
-      const response = await API.post("/transaction/", body, config);
+      const response = await API.post(`/transaction/${item.id}`, body, config);
       console.log(response);
-
-      // Checking process
-      // if (response?.status == 200) {
-      //   const alert = (
-      //     <Alert variant="success" className="py-1">
-      //       Add Transaction success
-      //     </Alert>
-      //   );
-      //   setMessage(alert);
-      //   navigate("/profile");
-      // }
 
       const token = response.data.payment.token;
 
@@ -242,16 +231,20 @@ export default function Cart() {
                             />{" "}
                             {item.name}
                           </label> */}
-                          <button
-                            onClick={handleBuy(
-                              item.id,
-                              item.qty,
-                              item.product.price
-                            )}
-                            className="btn btn-buy text-center btn-secondary px-3 "
-                          >
-                            Buy
-                          </button>
+                          <div className="text-center">
+                            <button
+                              onClick={() =>
+                                handleBuy({
+                                  id: item.idProduct,
+                                  qty: item.qty,
+                                  price: item.qty * item.product.price,
+                                })
+                              }
+                              className="btn btn-buy text-center  btn-secondary px-3 "
+                            >
+                              Buy
+                            </button>
+                          </div>
                         </div>
                       </Col>
                     </Row>
